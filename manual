@@ -1,0 +1,77 @@
+vim
+
+Vimrc
+gvim은 홈폴더에 .vimrc파일을 만들고
+그 안에 imap jj <ESC> 입력하고 저장
+
+
+
+:imap jj <ESC>
+inoremap jj <ESC>
+:set nu
+:set nonu
+:set rnu 
+:set rnu!
+
+이전위치로 되돌아가기
+Ctrl o
+
+현재커서위치를 화면의 중앙으로
+zz
+
+Replace
+:s/old/new
+:s/ foo /bar /g. In the current line only 
+:10,20s/old/new/g
+:-3,+4s/old/new/g
+:%s/ foo /bar /gc  in all lines with ask for confirm
+:%s/\<foo\>/bar/gc
+:%s/a/b/gi. A or a to b in whole
+
+Split
+Vsplit “filename”
+Split
+Move cursor
+        Ctrl w,w
+         Ctrl w, W
+          Ctrl w, [h j k l]
+:q close screen
+:qa close all
+
+Ctrl w q. 현재화면닫기
+Ctrl w o. 현재화면만 남기고 모두닫기
+
+화면위치바꾸기
+       Ctrl w r
+
+창크기 바꾸기
+        Ctrl w =
+         Ctrl w [n]+,-
+
+화면이동
+     Ctrl y 한줄 이동 y끝트머리를 잡아당기면?
+     Ctrl e  한줄.아래로
+
+          Ctrl u 화면을 1/2 윗페이지 보기 
+          Ctrl d 화면을 1/2아래 페이지 보기
+
+           Ctrl b 한 윗 페이지 보기 back
+          Ctrl f  한 아래 페이지 보기 forward
+
+
+mark
+ 이동모드에서 m[a-z]
+:marks 북마크보기
+:delmark a
+'a  move to a marked
+
+
+
+Tab 4spaces
+:set tabstop=4
+:set shiftwidth=4
+:set smartindent
+
+Macro
+qa
+@a
